@@ -1,0 +1,58 @@
+#Create a program that manages a dictionary of word meanings. The program allow users perform
+# the following actions.
+#Add a word , search for meaning , display all words , update meaning , delete word.
+
+dictionary = {}
+
+while True:
+    print("\nDictionary Management System")
+    print("1. Add a word")
+    print("2. Search for meaning")
+    print("3. Display all words")
+    print("4. Update meaning")
+    print("5. Delete word")
+    print("6. Exit")
+
+    choice = input("Enter your choice:")
+
+    if choice == "1":
+        word = input("Enter the word:").lower()
+        meaning = input("Enter the meaning:")
+        dictionary[word] = meaning
+        print("Word added successfully!")
+
+    elif choice == "2":
+        word = input("Enter the word to search:").lower()
+        if word in dictionary:
+            print("Meaning:" , dictionary[word])
+        else:
+            print("Word not found in the dictionary.")
+
+    elif choice == "3":
+        if dictionary:
+            print("Words and their Meanings:")
+            for word , meaning in dictionary.items():
+                 print(f"{word}: {meaning}:")
+        else:
+            print("Dictionary is empty.")
+    elif choice == "4":
+        word = input("Enter word to update:").lower()
+        if word in dictionary:
+            meaning = input("Enter new meaning:")
+            print("Meaning updated successfully!")
+        else:
+            print("Word not found")
+
+    elif choice == "5":
+        word = input("Enter word to delete:").lower()
+        if word in dictionary:
+            del dictionary[word]
+            print("Word deleted successfully!")
+        else:
+            print("Word not found")
+
+    elif choice == "6":
+        print("Program ended!")
+        break
+    else:
+        print("Invalid choice.Please try again")

@@ -1,0 +1,10 @@
+#CREATING A SUPER MARKET LIST
+#List of items
+lists = '''
+Rice        Rs 10/Kg
+Sugar       Rs 8/Kg
+Oil         Rs 30/Kg
+Salt        Rs 25/Kg
+Paneer      Rs 40/Kg      
+Maggie      Rs 12/Kg
+'''
